@@ -6,6 +6,8 @@ import Scrollbar from './components/scrollbar/scrollbar'
 import NeonButton from './components/button/neonButton'
 import GlitchText from './components/glitchText/glitchText'
 
+import Contact from './panels/contact'
+
 function App() {
   return (
     <React.Fragment>
@@ -22,6 +24,7 @@ function App() {
       </NeonButton>
     </div>
 
+    <Contact/>
     </React.Fragment>
 
 
