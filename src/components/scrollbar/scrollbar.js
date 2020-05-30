@@ -2,6 +2,9 @@ import React, {useEffect} from 'react'
 import './scrollbar.css'
 
 export default function Scrollbar({children}) {
+    useEffect(()=>{
+        document.getElementById('progressbar').style.height="0%"
+    },[])
     useEffect(() => {
         let progress = document.getElementById('progressbar')
         let totalHeight = document.body.scrollHeight - window.innerHeight;
