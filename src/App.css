@@ -97,7 +97,7 @@ header #toggle:after
 {
     position: fixed;
     top:0;
-    right: 0;
+    right: -200px;
     width: 400px;
     height: 100vh;
     background: #40c3ff;
@@ -105,4 +105,110 @@ header #toggle:after
     display: grid;
     place-items: center;
     transition: 0.5s;
+}
+#navigation.active
+{
+    right: 0;
+}
+#navigation ul
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+#navigation ul li
+{
+    list-style: none;
+}
+#navigation ul li a 
+{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase ;
+}
+.content
+{
+    max-width: 600px;
+}
+.content h2
+{
+    color: #fff;
+    font-size: 2.5em;
+}
+.content h2 span
+{
+    color: #40c3ff ;
+    font-size: 1.2em;
+}
+.content p
+{
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 300 ;
+}
+.content a
+{
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    background: #fff;
+    color: #000;
+    padding:10px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.sci
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 100px;
+}
+.sci li
+{
+    list-style: none;
+}
+.sci li a
+{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    margin: 10px 0 0;
+}
+.sci li a:hover
+{
+    background: #fff;
+}
+@media (max-width: 767px)
+{
+header 
+{
+    padding: 20px 50px;
+}
+.banner 
+{
+    padding: 100px 50px 150px;
+}
+.banner h2
+{
+    font-size: 1.8em;
+}
+.banner p
+{
+    font-size: 1em;
+}
+.banner .content p,
+.banner .content a
+{
+    font-size: 1em;
+}
+
 }

@@ -5,7 +5,10 @@ function App() {
   
   const toggle = () => {
     var sec = document.getElementById('sec');
+    var navigation = document.getElementById('navigation');
+
     sec.classList.toggle('active');
+    navigation.classList.toggle('active')
   }
 
   return (
