@@ -2,7 +2,7 @@ import React from 'react'
 import './contact.css'
 
 
-import NeonButton from '../components/button/neonButton'
+import NeonButton from '../button/neonButton'
 
 
 export default function Contact() {

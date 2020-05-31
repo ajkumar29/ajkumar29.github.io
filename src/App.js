@@ -6,7 +6,7 @@ import Scrollbar from './components/scrollbar/scrollbar'
 import NeonButton from './components/button/neonButton'
 import GlitchText from './components/glitchText/glitchText'
 
-import Contact from './panels/contact'
+import Contact from './components/contactForm/contact'
 
 function App() {
   return (
