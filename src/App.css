@@ -210,5 +210,29 @@ header
 {
     font-size: 1em;
 }
-
+.banner.active
+{
+    transform: translateX(-250px)
+}
+#navigation
+{
+    width: 250px;
+}
+#navigation ul li a
+{
+    font-size: 1.5em;
+    margin: 5px 0;
+}
+.sci
+{
+    position: absolute;
+    bottom: 50px;
+    right: initial;
+    flex-direction: row;
+}
+.sci li a 
+{
+    margin: initial;
+    margin-right: 10px;
+}
 }
