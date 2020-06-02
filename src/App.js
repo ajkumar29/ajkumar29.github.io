@@ -1,5 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './App.css';
+
+import Card from './components/card/card'
 
 function App() {
   
@@ -37,6 +39,9 @@ function App() {
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Contacts</a></li>
       </ul>
+    </div>
+    <div>
+      <Card />
     </div>
     </React.Fragment>
 
