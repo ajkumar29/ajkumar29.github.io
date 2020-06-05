@@ -1,202 +1,162 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
-body
-{
-    background: #000;
+body {
+  background: #000;
 }
-#buttons
-{
-    display: flex;
-    justify-content: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-*
-{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px;
+  z-index: 100000;
+  transition: 0.6s;
 }
-header
-{
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 100px;
-    z-index: 100000;
-    transition: 0.6s;
+header .logo {
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6;
 }
-header .logo
-{
-    position: relative;
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.6;
+header #toggle {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
-header #toggle
-{
-    position: relative;
-    width: 30px;
-    height:30px;
-    cursor: pointer;
+header #toggle:before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
 }
-header #toggle:before
-{
-    content:'';
-    position: absolute;
-    top:7px;
-    width:100%;
-    height:2px;
-    background: #fff;
+header #toggle:after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
 }
-header #toggle:after
-{
-    content:'';
-    position: absolute;
-    bottom:7px;
-    width:100%;
-    height:2px;
-    background: #fff;
+.banner.active header #toggle:before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
-.banner.active header #toggle:before
-{
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg); 
+.banner.active header #toggle:after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
-.banner.active header #toggle:after
-{
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg); 
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  background: #000;
+  /* background: url(); background-size: cover; USE THIS FOR PICTURE AS BACKGROUND*/
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  z-index: 2;
 }
-.banner
-{
-    position: relative;
-    width:100%;
-    min-height: 100vh;
-    padding: 100px;
-    background: #000;
-    /* background: url(); background-size: cover; USE THIS FOR PICTURE AS BACKGROUND*/
-    display: flex;
-    align-items: center;
-    transition: 0.5s;
-    z-index: 2;
+.banner.active {
+  transform: translateX(-400px);
 }
-.banner.active
-{
-    transform: translateX(-400px)
+.content {
+  width: 100%;
 }
-.content
-{
-    width: 100%;
+.content h2 {
+  color: #fff;
+  font-size: 2.5em;
 }
-.content h2
-{
-    color: #fff;
-    font-size: 2.5em;
+#name {
+  color: #40c3ff;
+  font-size: 1.2em;
 }
-#name
-{
-    color: #40c3ff ;
-    font-size: 1.2em;
+.content .buttons {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* .content p
-{
-    font-size: 1.2em;
-    color: #fff;
-    font-weight: 300 ;
-} */
-.content .buttons 
-{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-/* .content a
-{
-    position: relative;
-    display: inline-block;
-    margin-top: 20px;
-    color: #000;
-    padding:10px 30px;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: 500;
-} */
-
-#wrap
-{
-    border-right: 0.08em solid #fff;
-}
-.typewrite
-{
-    text-align: center;
+.cvButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.line-1{
-    position: relative;
-    top: 50%;  
-    margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);    
+#wrap {
+  border-right: 0.08em solid #fff;
+}
+.typewrite {
+  text-align: center;
+}
+
+.line-1 {
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
 }
 
 /* Animation */
-.anim-typewriter{
-    animation: blinkTextCursor 500ms steps(44) infinite normal;
+.anim-typewriter {
+  animation: blinkTextCursor 500ms steps(44) infinite normal;
 }
-@keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
-@media (max-width: 750px)
-{
-header 
-{
+@media (max-width: 750px) {
+  header {
     padding: 20px 50px;
-}
-.banner 
-{
+  }
+  .banner {
     padding: 100px 50px 150px;
-}
-.banner h2
-{
+  }
+  .banner h2 {
     font-size: 1.8em;
-}
-.banner p
-{
+  }
+  .banner p {
     font-size: 1em;
-}
-.banner .content p,
-.banner .content a
-{
+  }
+  .banner .content p,
+  .banner .content a {
     font-size: 1em;
-}
-.banner.active
-{
-    transform: translateX(-250px)
-}
+  }
+  .banner.active {
+    transform: translateX(-250px);
+  }
 
-.content .buttons 
-{
+  .content .buttons {
     width: 100%;
     border: 10px;
-    
-}
-.content .buttons .logoText 
-{
-   display: none; 
-}
-
+  }
+  .content .buttons .logoText {
+    display: none;
+  }
 }
