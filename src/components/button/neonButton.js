@@ -1,15 +1,16 @@
 import React, {useEffect} from 'react'
 import './neonButton.css'
 
-export default function NeonButton({children, color}) {
+export default function NeonButton(props) {
+    const {children,id, color} = props
 
     useEffect(() => {
-        document.getElementById(`containerButton_${color}`).style.setProperty('--main-color', color)
+        console.log(props)
+        document.getElementById(`containerButton_${id}`).style.setProperty('--main-color', color)
     }, [])
-
     return (
-        <div class="containerButton" id={`containerButton_${color}`}>
-            <a>{children}</a>
+        <div className="containerButton" id={`containerButton_${id}`}>
+            <a id="neonButton">{children}</a>
         </div>
 
     )
