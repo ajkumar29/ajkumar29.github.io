@@ -93,42 +93,6 @@ header #toggle:after
 {
     transform: translateX(-400px)
 }
-#navigation
-{
-    position: fixed;
-    top:0;
-    right: -200px;
-    width: 25%;
-    height: 100vh;
-    background: #40c3ff;
-    z-index: 1;
-    display: grid;
-    place-items: center;
-    transition: 0.5s;
-}
-#navigation.active
-{
-    right: 0;
-}
-#navigation ul
-{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-#navigation ul li
-{
-    list-style: none;
-}
-#navigation ul li a 
-{
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 2em;
-    font-weight: 600;
-    text-transform: uppercase ;
-}
 .content
 {
     width: 100%;
@@ -151,9 +115,10 @@ header #toggle:after
 } */
 .content .buttons 
 {
-    display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* .content a
 {
@@ -222,19 +187,12 @@ header
 {
     transform: translateX(-250px)
 }
-#navigation
-{
-    width: 25%;
-}
-#navigation ul li a
-{
-    font-size: 1em;
-    margin: 5px 0;
-}
 
 .content .buttons 
 {
-    width: 100%
+    width: 100%;
+    border: 10px;
+    
 }
 .content .buttons .logoText 
 {

@@ -53,7 +53,8 @@ function App() {
     navigation.classList.toggle('active')
   }
 
-  const tick = (typewriteList, el,loopCounter=0,repeatCounter=0, period=2000, isDeleting=false,txt='', htmlAdd='') => {
+  const tick = (typewriteList, el,loopCounter=0,repeatCounter=0, period=1000, isDeleting=false,txt='', htmlAdd='') => {
+    
     if (loopCounter< typewriteList.length){
       const typewrite = typewriteList[loopCounter]
       const {fullTxts, componentStart, componentEnd, repeat} = typewrite
@@ -68,13 +69,15 @@ function App() {
 
       el.innerHTML = htmlAdd + componentStart+html+componentEnd;
 
-      var delta = 150 - Math.random() * 100;
+      var delta = 200 - Math.random() * 100;
 
       if (isDeleting) { delta /= 2; }
 
       if (!isDeleting && txt === fullTxt) {
         delta = period;
         if (repeat){
+          delta = 2000;
+
           isDeleting = true;
         } else {
           loopCounter++
@@ -86,11 +89,10 @@ function App() {
           repeatCounter++
         }
       isDeleting = false;
-      delta = 300;
       }
-
       setTimeout(function() {
-        tick(typewriteList, el,loopCounter,repeatCounter, period, isDeleting,txt, htmlAdd);
+        console.log(delta)
+        tick(typewriteList, el,loopCounter,repeatCounter, delta, isDeleting,txt, htmlAdd);
       }, delta);
     }
     
@@ -109,10 +111,6 @@ function App() {
   return (
     <React.Fragment>
     <section className="banner" id="sec">
-      <header>
-        <a href="#" className="logo">AJ</a>
-        <div id="toggle" onClick={toggle}></div>
-      </header>
        <div className="content">
          <div className="typewrite">
          </div>
@@ -125,15 +123,7 @@ function App() {
 
 
     </section>
-    <div id="navigation">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contacts</a></li>
-      </ul>
-    </div>
+
     </React.Fragment>
 
   );
