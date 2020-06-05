@@ -117,9 +117,9 @@ function App() {
          <div className="typewrite">
          </div>
          <div className="buttons">
-      <NeonButton id={"linkedin"} color={LINKEDIN_COLOUR_CODE}><i className="fab fa-linkedin-in"></i> LinkedIn</NeonButton>
-      <NeonButton id={"github"} color={GITHUB_COLOUR_CODE}><i className="fab fa-github"></i> GitHub</NeonButton>
-      <NeonButton id={"email"} color={EMAIL_COLOUR_CODE}><i className="far fa-envelope"></i> Email</NeonButton>
+      <NeonButton id={"linkedin"} color={LINKEDIN_COLOUR_CODE}><i className="fab fa-linkedin-in"></i><span className="logoText"> LinkedIn</span></NeonButton>
+      <NeonButton id={"github"} color={GITHUB_COLOUR_CODE}><i className="fab fa-github"></i><span className="logoText"> GitHub</span></NeonButton>
+      <NeonButton id={"email"} color={EMAIL_COLOUR_CODE}><i className="far fa-envelope"></i><span className="logoText"> Email</span></NeonButton>
       </div>
        </div>
 

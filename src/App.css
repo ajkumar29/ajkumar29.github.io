@@ -98,7 +98,7 @@ header #toggle:after
     position: fixed;
     top:0;
     right: -200px;
-    width: 400px;
+    width: 25%;
     height: 100vh;
     background: #40c3ff;
     z-index: 1;
@@ -131,7 +131,7 @@ header #toggle:after
 }
 .content
 {
-    width: 80%;
+    width: 100%;
 }
 .content h2
 {
@@ -191,7 +191,7 @@ header #toggle:after
     to{border-right-color: transparent;}
 }
 
-@media (max-width: 767px)
+@media (max-width: 650px)
 {
 header 
 {
@@ -203,7 +203,7 @@ header
 }
 .banner h2
 {
-    font-size: 1.8em;
+    font-size: 1.6em;
 }
 .banner p
 {
@@ -220,12 +220,21 @@ header
 }
 #navigation
 {
-    width: 250px;
+    width: 25%;
 }
 #navigation ul li a
 {
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 5px 0;
+}
+
+.content .buttons 
+{
+    width: 100%
+}
+.content .buttons .logoText 
+{
+   display: none; 
 }
 
 }
