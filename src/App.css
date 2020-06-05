@@ -83,7 +83,7 @@ header #toggle:after
     min-height: 100vh;
     padding: 100px;
     background: #000;
-    /* background: url(); backgroud-size: cover; USE THIS FOR PICTURE AS BACKGROUND*/
+    /* background: url(); background-size: cover; USE THIS FOR PICTURE AS BACKGROUND*/
     display: flex;
     align-items: center;
     transition: 0.5s;
@@ -138,17 +138,17 @@ header #toggle:after
     color: #fff;
     font-size: 2.5em;
 }
-.content span
+#name
 {
     color: #40c3ff ;
     font-size: 1.2em;
 }
-.content p
+/* .content p
 {
     font-size: 1.2em;
     color: #fff;
     font-weight: 300 ;
-}
+} */
 .content .buttons 
 {
     display: flex;
@@ -167,10 +167,29 @@ header #toggle:after
     font-weight: 500;
 } */
 
-/* .content .wrap 
+#wrap
 {
     border-right: 0.08em solid #fff;
-} */
+}
+
+.line-1{
+    position: relative;
+    top: 50%;  
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+    animation: blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
 
 @media (max-width: 767px)
 {

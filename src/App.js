@@ -13,35 +13,36 @@ function App() {
 
   const typewriteList =[
     {
-      fullTxt: "Hello World, ",
+      fullTxts: ["Hello World, "],
       componentStart: "<h2>",
       componentEnd:"</h2>",
       repeat:false
     },
     {
-      fullTxt: "I'm ",
+      fullTxts: ["I'm "],
       componentStart: "<h2>",
       componentEnd:"",
       repeat:false
     },
     {
-      fullTxt: "AJ Kumar",
-      componentStart: "<span>",
-      componentEnd:"</span>",
+      fullTxts: ["AJ Kumar"],
+      componentStart: "<span id='name'>",
+      componentEnd:"</span></h2>",
       repeat:false
     },
     {
-      fullTxt: "I'm a ",
+      fullTxts: ["I'm a "],
       componentStart: "<h2>",
       componentEnd:"",
       repeat:false
     },
     {
-      fullTxt: "Software Engineer Web Developer",
+      fullTxts: ["Software Engineer", "Web Developer"],
       componentStart: "",
       componentEnd:"</h2>",
-      repeat: true
+      repeat:true
     }
+
   ]
   
   const toggle = () => {
@@ -52,40 +53,47 @@ function App() {
     navigation.classList.toggle('active')
   }
 
-  const tick = (typewriteList, el,loopCounter=0, period=2000, isDeleting=false,txt='', htmlAdd='') => {
-    const typewrite = typewriteList[loopCounter]
-    const {fullTxt, componentStart, componentEnd, repeat} = typewrite
-    
-    if (isDeleting) {
-    txt = fullTxt.substring(0, txt.length - 1);
-    } else {
-    txt = fullTxt.substring(0, txt.length + 1);
-    }
-    const html = htmlAdd+ componentStart+txt+componentEnd
+  const tick = (typewriteList, el,loopCounter=0,repeatCounter=0, period=2000, isDeleting=false,txt='', htmlAdd='') => {
+    if (loopCounter< typewriteList.length){
+      const typewrite = typewriteList[loopCounter]
+      const {fullTxts, componentStart, componentEnd, repeat} = typewrite
 
-    el.innerHTML = '<span class="wrap">'+html+'</span>';
-
-    var delta = 200 - Math.random() * 100;
-
-    if (isDeleting) { delta /= 2; }
-
-    if (!isDeleting && txt === fullTxt) {
-      delta = period;
-      if (repeat){
-        isDeleting = true;
+      const fullTxt = fullTxts[repeatCounter % fullTxts.length]
+      if (isDeleting) {
+      txt = fullTxt.substring(0, txt.length - 1);
       } else {
-        loopCounter++
-        htmlAdd = html
-        txt=''
+      txt = fullTxt.substring(0, txt.length + 1);
       }
-    } else if (isDeleting && txt === '') {
-    isDeleting = false;
-    delta = 500;
-    }
+      const html ='<span class="line-1 anim-typewriter">'+txt+'</span>'
 
-    setTimeout(function() {
-      tick(typewriteList, el,loopCounter, period, isDeleting,txt, htmlAdd);
-    }, delta);
+      el.innerHTML = htmlAdd + componentStart+html+componentEnd;
+
+      var delta = 150 - Math.random() * 100;
+
+      if (isDeleting) { delta /= 2; }
+
+      if (!isDeleting && txt === fullTxt) {
+        delta = period;
+        if (repeat){
+          isDeleting = true;
+        } else {
+          loopCounter++
+          htmlAdd += componentStart+fullTxt+componentEnd
+          txt=''
+        }
+      } else if (isDeleting && txt === '') {
+        if (repeat){
+          repeatCounter++
+        }
+      isDeleting = false;
+      delta = 300;
+      }
+
+      setTimeout(function() {
+        tick(typewriteList, el,loopCounter,repeatCounter, period, isDeleting,txt, htmlAdd);
+      }, delta);
+    }
+    
 };
 
 
@@ -107,16 +115,7 @@ function App() {
       </header>
        <div className="content">
          <div className="typewrite">
-
          </div>
-
-         {/* <h2 className="typewriteText" data-typewrite='["Hello World, "]'/>
-           <br/>
-           <h2 className="typewriteText" data-typewrite='["Im"]'/>
-           <span className="typewriteText" data-typewrite='["AJ Kumar"]'/><br/>
-         <h2 className="typewriteText" data-typewrite='["Im a "]'/>
-         <h2 className="typewriteText" data-repeat='true' data-typewrite='["Web Developer", "Software Engineer"]'/>
-          */}
          <div className="buttons">
       <NeonButton id={"linkedin"} color={LINKEDIN_COLOUR_CODE}><i className="fab fa-linkedin-in"></i> LinkedIn</NeonButton>
       <NeonButton id={"github"} color={GITHUB_COLOUR_CODE}><i className="fab fa-github"></i> GitHub</NeonButton>
