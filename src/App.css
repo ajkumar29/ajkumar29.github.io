@@ -152,8 +152,8 @@ header #toggle:after
 .content .buttons 
 {
     display: flex;
-    width: 75%;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-evenly;
 }
 /* .content a
 {
@@ -170,6 +170,10 @@ header #toggle:after
 #wrap
 {
     border-right: 0.08em solid #fff;
+}
+.typewrite
+{
+    text-align: center;
 }
 
 .line-1{
@@ -191,7 +195,7 @@ header #toggle:after
     to{border-right-color: transparent;}
 }
 
-@media (max-width: 650px)
+@media (max-width: 750px)
 {
 header 
 {
@@ -203,7 +207,7 @@ header
 }
 .banner h2
 {
-    font-size: 1.6em;
+    font-size: 1.8em;
 }
 .banner p
 {
