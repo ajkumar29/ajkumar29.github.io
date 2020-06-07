@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./App.css";
 
 import Home from "./panels/home";
+import Contact from "./components/contactForm/contact";
 
 function App() {
   const typewriteList = [
@@ -30,24 +31,28 @@ function App() {
       repeat: false,
     },
     {
-      fullTxts: ["Software Engineer", "Web Developer"],
+      fullTxts: ["Web Developer", "Software Engineer"],
       componentStart: "",
       componentEnd: "</h2>",
       repeat: true,
     },
   ];
 
+  const contactMeRef = useRef(null);
+
   return (
     <React.Fragment>
       <section className="home">
-        <Home typewriteList={typewriteList} />
+        <Home typewriteList={typewriteList} contactMeRef={contactMeRef} />
       </section>
 
       <section className="About"></section>
 
       <section className="Projects"></section>
 
-      <section className="Contact me"></section>
+      <section className="Contact me" ref={contactMeRef}>
+        <Contact />
+      </section>
     </React.Fragment>
   );
 }
