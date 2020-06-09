@@ -12,7 +12,7 @@
 #contactContainer h2 {
   width: 100%;
   color: #45f3ff;
-  font-size: 36px;
+  font-size: 1.9em;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -40,6 +40,12 @@
 }
 
 #contactContainer .row100 .inputBox input,
+#contactContainer .row100 .inputBox.textarea textarea,
+#contactContainer .row100 .inputBox .text {
+  font-size: 1em;
+}
+
+#contactContainer .row100 .inputBox input,
 #contactContainer .row100 .inputBox.textarea textarea {
   position: absolute;
   width: 100%;
@@ -48,7 +54,6 @@
   box-shadow: none;
   border: none;
   outline: none;
-  font-size: 18px;
   padding: 0 10px;
   z-index: 1;
   color: #000;
@@ -58,7 +63,6 @@
   top: 0;
   left: 0;
   line-height: 40px;
-  font-size: 18px;
   padding: 0 10px;
   display: block;
   transition: 0.5s;
@@ -107,4 +111,16 @@
 .sendButton {
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 750px) {
+  #contactContainer h2 {
+    font-size: 1.6em;
+  }
+
+  #contactContainer .row100 .inputBox input,
+  #contactContainer .row100 .inputBox.textarea textarea,
+  #contactContainer .row100 .inputBox .text {
+    font-size: 0.9em;
+  }
 }
