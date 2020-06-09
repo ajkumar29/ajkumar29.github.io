@@ -9,7 +9,7 @@
   --main-color: coral;
 }
 .containerButton {
-  display: inline-flex;
+  display: flex;
 }
 #neonButton {
   position: relative;
@@ -61,4 +61,11 @@
 #neonButton:hover:after {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 750px) {
+  #neonButton {
+    padding: 5px 20px;
+    margin: 10px 15px 15px 15px;
+  }
 }

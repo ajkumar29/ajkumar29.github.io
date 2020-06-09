@@ -8,8 +8,9 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 100px;
+  padding: 50px;
   /* background: url(); background-size: cover; USE THIS FOR PICTURE AS BACKGROUND*/
   display: flex;
   align-items: center;
+  justify-content: center;
 }

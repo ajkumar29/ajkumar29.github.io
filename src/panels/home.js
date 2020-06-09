@@ -7,7 +7,7 @@ export default function Home({ typewriteList, contactMeRef }) {
   const LINKEDIN_COLOUR_CODE = "#2867B2";
   const GITHUB_COLOUR_CODE = "#BD2C00";
   const EMAIL_COLOUR_CODE = "#6CC644";
-  const CV_COLOUR_CODE = "#f6cd61";
+  const CV_COLOUR_CODE = "#F6CD61";
 
   const scrollToRef = (ref) =>
     window.scrollTo({
@@ -102,7 +102,10 @@ export default function Home({ typewriteList, contactMeRef }) {
       </div>
       <div className="cvButton">
         <NeonButton id={"cv"} color={CV_COLOUR_CODE}>
-          <i className="far fa-file"></i> Download My CV
+          <span className="logoText">
+            <i className="far fa-file"></i> Download My{" "}
+          </span>
+          CV
         </NeonButton>
       </div>
     </div>

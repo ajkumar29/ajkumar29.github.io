@@ -18,7 +18,7 @@
   margin-top: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .cvButton {
   display: flex;
@@ -57,31 +57,15 @@
 }
 
 @media (max-width: 750px) {
-  header {
-    padding: 20px 50px;
-  }
-  .banner {
-    padding: 100px 50px 150px;
-  }
-  .banner h2 {
-    font-size: 1.8em;
-  }
-  .banner p {
-    font-size: 1em;
-  }
-  .banner .content p,
-  .banner .content a {
-    font-size: 1em;
-  }
-  .banner.active {
-    transform: translateX(-250px);
+  .content h2 {
+    font-size: 1.5em;
   }
 
-  .content .buttons {
+  .content .buttons,
+  .cvButton {
     width: 100%;
-    border: 10px;
   }
-  .content .buttons .logoText {
+  .logoText {
     display: none;
   }
 }

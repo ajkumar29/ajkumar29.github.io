@@ -25,13 +25,13 @@ function App() {
       repeat: false,
     },
     {
-      fullTxts: ["I'm a "],
+      fullTxts: ["I'm a"],
       componentStart: "<h2>",
       componentEnd: "",
       repeat: false,
     },
     {
-      fullTxts: ["Web Developer", "Software Engineer"],
+      fullTxts: [" Web Developer", "n App Developer", " Software Engineer"],
       componentStart: "",
       componentEnd: "</h2>",
       repeat: true,
