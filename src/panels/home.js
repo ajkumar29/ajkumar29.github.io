@@ -9,6 +9,9 @@ export default function Home({ typewriteList, contactMeRef }) {
   const EMAIL_COLOUR_CODE = "#6CC644";
   const CV_COLOUR_CODE = "#F6CD61";
 
+  const GITHUB_URL = "https://github.com/ajkumar29";
+  const LINKEDIN_URL = "https://www.linkedin.com/in/aj-uthayakumar";
+
   const scrollToRef = (ref) =>
     window.scrollTo({
       left: 0,
@@ -79,15 +82,27 @@ export default function Home({ typewriteList, contactMeRef }) {
     tick(typewriteList, el);
   }, []);
 
+  const openUrl = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="content">
       <div className="typewrite"></div>
       <div className="buttons">
-        <NeonButton id={"linkedin"} color={LINKEDIN_COLOUR_CODE}>
+        <NeonButton
+          id={"linkedin"}
+          color={LINKEDIN_COLOUR_CODE}
+          onClick={() => openUrl(LINKEDIN_URL)}
+        >
           <i className="fab fa-linkedin-in"></i>
           <span className="logoText"> LinkedIn</span>
         </NeonButton>
-        <NeonButton id={"github"} color={GITHUB_COLOUR_CODE}>
+        <NeonButton
+          id={"github"}
+          color={GITHUB_COLOUR_CODE}
+          onClick={() => openUrl(GITHUB_URL)}
+        >
           <i className="fab fa-github"></i>
           <span className="logoText"> GitHub</span>
         </NeonButton>
