@@ -1,10 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import "./App.css";
 
 import Home from "./panels/home";
 import Contact from "./components/contactForm/contact";
+import About from "./panels/about";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const typewriteList = [
     {
       fullTxts: ["Hello World, "],
@@ -46,7 +53,9 @@ function App() {
         <Home typewriteList={typewriteList} contactMeRef={contactMeRef} />
       </section>
 
-      <section className="About"></section>
+      <section className="About">
+        <About />
+      </section>
 
       <section className="Projects"></section>
 

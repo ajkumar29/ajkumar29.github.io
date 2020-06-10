@@ -1,0 +1,8 @@
+.aboutContainer {
+  text-align: center;
+  color: aliceblue;
+}
+.abouttext1 {
+  animation: bounce;
+  animation-duration: 2s;
+}
