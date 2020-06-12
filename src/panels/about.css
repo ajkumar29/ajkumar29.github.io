@@ -1,4 +1,25 @@
 .aboutContainer {
   text-align: center;
   color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 50px;
+}
+.year {
+  font-weight: 700;
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.company {
+  font-size: 2em;
+}
+.role {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.description {
+  font-size: 1em;
 }

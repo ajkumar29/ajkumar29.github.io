@@ -26,6 +26,14 @@
   justify-content: center;
 }
 
+.beginButton {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 #wrap {
   border-right: 0.08em solid #fff;
 }

@@ -8,6 +8,7 @@ export default function Home({ typewriteList, contactMeRef }) {
   const GITHUB_COLOUR_CODE = "#BD2C00";
   const EMAIL_COLOUR_CODE = "#6CC644";
   const CV_COLOUR_CODE = "#F6CD61";
+  const BEGIN_COLOUR_CODE = "#F6CD61";
 
   const GITHUB_URL = "https://github.com/ajkumar29";
   const LINKEDIN_URL = "https://www.linkedin.com/in/aj-uthayakumar";
@@ -121,6 +122,11 @@ export default function Home({ typewriteList, contactMeRef }) {
             <i className="far fa-file"></i> Download My{" "}
           </span>
           CV
+        </NeonButton>
+      </div>
+      <div className="beginButton">
+        <NeonButton id={"begin"} color={BEGIN_COLOUR_CODE}>
+          See my journey
         </NeonButton>
       </div>
     </div>
