@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./home.css";
 import NeonButton from "../components/button/neonButton";
 import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+import Morph from "../components/deviceMorph/morph";
 
 export default function Home({ typewriteList, contactMeRef }) {
   const LINKEDIN_COLOUR_CODE = "#2867B2";
@@ -88,47 +89,50 @@ export default function Home({ typewriteList, contactMeRef }) {
   };
 
   return (
-    <div className="content">
-      <div className="typewrite"></div>
-      <div className="buttons">
-        <NeonButton
-          id={"linkedin"}
-          color={LINKEDIN_COLOUR_CODE}
-          onClick={() => openUrl(LINKEDIN_URL)}
-        >
-          <i className="fab fa-linkedin-in"></i>
-          <span className="logoText"> LinkedIn</span>
-        </NeonButton>
-        <NeonButton
-          id={"github"}
-          color={GITHUB_COLOUR_CODE}
-          onClick={() => openUrl(GITHUB_URL)}
-        >
-          <i className="fab fa-github"></i>
-          <span className="logoText"> GitHub</span>
-        </NeonButton>
-        <NeonButton
-          id={"email"}
-          color={EMAIL_COLOUR_CODE}
-          onClick={() => scrollToRef(contactMeRef)}
-        >
-          <i className="far fa-envelope"></i>
-          <span className="logoText"> Email</span>
-        </NeonButton>
+    <React.Fragment>
+      <div className="content">
+        <div className="typewrite"></div>
+        <div className="buttons">
+          <NeonButton
+            id={"linkedin"}
+            color={LINKEDIN_COLOUR_CODE}
+            onClick={() => openUrl(LINKEDIN_URL)}
+          >
+            <i className="fab fa-linkedin-in"></i>
+            <span className="logoText"> LinkedIn</span>
+          </NeonButton>
+          <NeonButton
+            id={"github"}
+            color={GITHUB_COLOUR_CODE}
+            onClick={() => openUrl(GITHUB_URL)}
+          >
+            <i className="fab fa-github"></i>
+            <span className="logoText"> GitHub</span>
+          </NeonButton>
+          <NeonButton
+            id={"email"}
+            color={EMAIL_COLOUR_CODE}
+            onClick={() => scrollToRef(contactMeRef)}
+          >
+            <i className="far fa-envelope"></i>
+            <span className="logoText"> Email</span>
+          </NeonButton>
+        </div>
+        <div className="cvButton">
+          <NeonButton id={"cv"} color={CV_COLOUR_CODE}>
+            <span className="logoText">
+              <i className="far fa-file"></i> Download My{" "}
+            </span>
+            CV
+          </NeonButton>
+        </div>
+        <div className="beginButton">
+          <NeonButton id={"begin"} color={BEGIN_COLOUR_CODE}>
+            See my journey
+          </NeonButton>
+        </div>
       </div>
-      <div className="cvButton">
-        <NeonButton id={"cv"} color={CV_COLOUR_CODE}>
-          <span className="logoText">
-            <i className="far fa-file"></i> Download My{" "}
-          </span>
-          CV
-        </NeonButton>
-      </div>
-      <div className="beginButton">
-        <NeonButton id={"begin"} color={BEGIN_COLOUR_CODE}>
-          See my journey
-        </NeonButton>
-      </div>
-    </div>
+      <Morph />
+    </React.Fragment>
   );
 }
