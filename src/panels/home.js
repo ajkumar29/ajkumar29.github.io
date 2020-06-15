@@ -116,8 +116,6 @@ export default function Home({ typewriteList, contactMeRef }) {
             <i className="far fa-envelope"></i>
             <span className="logoText"> Email</span>
           </NeonButton>
-        </div>
-        <div className="cvButton">
           <NeonButton id={"cv"} color={CV_COLOUR_CODE}>
             <span className="logoText">
               <i className="far fa-file"></i> Download My{" "}
@@ -125,13 +123,14 @@ export default function Home({ typewriteList, contactMeRef }) {
             CV
           </NeonButton>
         </div>
-        <div className="beginButton">
-          <NeonButton id={"begin"} color={BEGIN_COLOUR_CODE}>
-            See my journey
-          </NeonButton>
-        </div>
       </div>
       <Morph />
+
+      <div className="beginButton">
+        <NeonButton id={"begin"} color={BEGIN_COLOUR_CODE}>
+          See my journey
+        </NeonButton>
+      </div>
     </React.Fragment>
   );
 }

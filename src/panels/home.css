@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .content {
-  width: 100%;
+  width: 50%;
 }
 .content h2 {
   color: #fff;
@@ -19,11 +19,6 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-}
-.cvButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .beginButton {
