@@ -65,7 +65,6 @@ export default function Home({ typewriteList, contactMeRef }) {
         isDeleting = false;
       }
       setTimeout(function () {
-        console.log(delta);
         tick(
           typewriteList,
           el,
