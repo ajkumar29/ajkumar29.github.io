@@ -2,9 +2,11 @@
   text-align: center;
   color: aliceblue;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 1fr 5fr;
   gap: 50px;
   padding: 50px;
+  overflow-x: hidden;
+  /* overflow-x:hidden added as aos animation adds extra width to page causing a scroll bar to appear */
 }
 .year {
   font-weight: 700;

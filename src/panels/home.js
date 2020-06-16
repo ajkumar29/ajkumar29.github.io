@@ -89,8 +89,11 @@ export default function Home({ typewriteList, contactMeRef }) {
 
   return (
     <React.Fragment>
-      <div className="content">
-        <div className="typewrite"></div>
+      <div>
+        <div className="content">
+          <div className="typewrite" />
+          <Morph />
+        </div>
         <div className="buttons">
           <NeonButton
             id={"linkedin"}
@@ -124,8 +127,6 @@ export default function Home({ typewriteList, contactMeRef }) {
           </NeonButton>
         </div>
       </div>
-      <Morph />
-
       <div className="beginButton">
         <NeonButton id={"begin"} color={BEGIN_COLOUR_CODE}>
           See my journey

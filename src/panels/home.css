@@ -3,8 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .content {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .content h2 {
   color: #fff;
@@ -14,7 +18,7 @@
   color: #40c3ff;
   font-size: 1.2em;
 }
-.content .buttons {
+.buttons {
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -34,6 +38,7 @@
 }
 .typewrite {
   text-align: center;
+  min-width: 50%;
 }
 
 .line-1 {
@@ -64,10 +69,10 @@
     font-size: 1.5em;
   }
 
-  .content .buttons,
+  /* .content .buttons,
   .cvButton {
     width: 100%;
-  }
+  } */
   .logoText {
     display: none;
   }
